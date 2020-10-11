@@ -17,7 +17,7 @@ public class BookController {
     private BookService bookservice;
 
     @Autowired
-    public BookController(BookRepository bookRepository) {
+    public BookController(BookRepository bookservice) {
         this.bookservice = bookservice;
     }
 
