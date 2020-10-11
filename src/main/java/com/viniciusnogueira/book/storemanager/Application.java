@@ -1,4 +1,4 @@
-package com.vinicius.book.storemanager;
+package com.viniciusnogueira.book.storemanager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
