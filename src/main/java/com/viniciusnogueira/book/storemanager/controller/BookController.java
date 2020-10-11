@@ -3,6 +3,7 @@ package com.viniciusnogueira.book.storemanager.controller;
 import com.viniciusnogueira.book.storemanager.dto.MessageResponseDTO;
 import com.viniciusnogueira.book.storemanager.entity.Book;
 import com.viniciusnogueira.book.storemanager.repository.BookRepository;
+import com.viniciusnogueira.book.storemanager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -13,17 +14,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/v1/books")
 public class BookController {
 
-    private BookRepository bookRepository;
+    private BookService bookservice;
 
     @Autowired
     public BookController(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+        this.bookservice = bookservice;
     }
 
     @PostMapping
     public MessageResponseDTO create (@RequestBody Book book){
-        Book savedBook = bookRepository.save(book);
-        return  MessageResponseDTO.builder().message("Book create with OD" + savedBook.getId()).build();
+
+        return  bookservice.create(book);
     }
 
 }
