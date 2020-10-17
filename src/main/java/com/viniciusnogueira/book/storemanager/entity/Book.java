@@ -27,6 +27,9 @@ public class Book {
     private Integer pages;
 
     @Column(nullable = false)
+    private Integer chapters;
+
+    @Column(nullable = false)
     private String isbn;
 
     @Column(name = "publisher_name",nullable = false, unique = true)
