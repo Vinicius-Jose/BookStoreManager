@@ -1,4 +1,4 @@
-<h2>Bookstore API Manager</h2>
+﻿<h2>Bookstore API Manager</h2>
 
 O objetivo do projeto Bookstore API Manager é disponibilizar uma API para cadastro dos livros de uma livraria através de uma API REST.
 
@@ -42,4 +42,31 @@ Endpoitn do projeto no Heroku
 
 ```
 https://bookstore-manager-vinicius.herokuapp.com/api/v1/books
+```
+
+Para inserir um novo livro executar um POST no endpoint acima passando o seguinte JSON no body da requisição
+
+OBS: Valores ficticios
+
+
+```
+{
+  "name":"Nome do Livro",
+  "pages": 5,
+  "chapters": 5,
+  "isbn": "isbn do livro",
+  "publisherName" : "Editora",
+  "author":{
+        "name": "Nome do author",
+        "age": 50
+  }
+}
+
+```
+
+
+Para buscar um livro executar uma requisição GET no seguinte endpoint
+
+ ```
+https://bookstore-manager-vinicius.herokuapp.com/api/v1/books/{id do livro}
 ```
