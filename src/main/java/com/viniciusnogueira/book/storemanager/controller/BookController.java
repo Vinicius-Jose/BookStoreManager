@@ -2,8 +2,6 @@ package com.viniciusnogueira.book.storemanager.controller;
 
 import com.viniciusnogueira.book.storemanager.dto.BookDTO;
 import com.viniciusnogueira.book.storemanager.dto.MessageResponseDTO;
-import com.viniciusnogueira.book.storemanager.entity.Book;
-import com.viniciusnogueira.book.storemanager.repository.BookRepository;
 import com.viniciusnogueira.book.storemanager.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
