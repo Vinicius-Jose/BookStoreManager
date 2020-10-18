@@ -26,7 +26,7 @@ public class BookService {
         Book bookToSave = bookMapper.toModel(bookDTO);
 
         Book savedBook = bookRepository.save(bookToSave);
-        return  MessageResponseDTO.builder().message("Book created with ID " + savedBook.getId()).build();
+        return  MessageResponseDTO.builder().message("Book created with ID " + savedBook.getId() + " Author name " + savedBook.getAuthor().getName()).build();
     }
 
     public BookDTO findById(Long id) throws BookNotFoundException {
